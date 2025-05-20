@@ -24,7 +24,7 @@ A simple and interactive quiz application built with JavaScript, HTML, and CSS.
    git clone https://github.com/Nidhi-dwivedi/Quiz-App.git
    cd Quiz-App
   
-2. ** Open index.html in your browser**
+2. **Open index.html in your browser**
 
 - No build steps are required since this is a frontend-only app
 - Or use a Live Server extension if you are in VS Code
