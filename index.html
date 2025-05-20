@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- User Login -->
+    <div id="user-login">
+      <h2>Enter Your Name</h2>
+      <input type="text" id="username" placeholder="Your name" />
+      <button onclick="login()">Start</button>
+    </div>
+
+    <!-- Category Selection -->
+    <div id="category-selection" class="hidden">
+      <h1>Choose a Quiz Category</h1>
+      <button id="theme-toggle">🌙/☀️ Theme</button>
+      <label for="timer-select">Timer per question:</label>
+      <select id="timer-select">
+        <option value="10">10s</option>
+        <option value="20">20s</option>
+        <option value="30" selected>30s</option>
+        <option value="45">45s</option>
+        <option value="60">1m</option>
+      </select>
+      <div class="category-buttons">
+        <button onclick="startQuiz('literature')">literature</button>
+        <button onclick="startQuiz('DSA')">DSA</button>
+        <button onclick="startQuiz('DBMS')">DBMS</button>
+        <button onclick="startQuiz('Maths')">Maths</button>
+        <button onclick="startQuiz('Networks')">Networks</button>
+        <button onclick="startQuiz('OS')">OS</button>
+        <button onclick="startQuiz('OOPS')">OOPS</button>
+        <button onclick="startQuiz('Frontend')">Frontend</button>
+        <button onclick="startQuiz('Backend')">Backend</button>
+      </div>
+    </div>
+
+    <!-- Quiz Area -->
+    <div id="quiz-container" class="hidden">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <p>Time Left: <span id="time">30</span> seconds</p>
+        <button id="next-btn" class="hidden">Next</button>  
+    </div>
+
+    <!-- Result Area -->
+    <div id="result" class="hidden">
+      <h2>Your Score: <span id="score"></span></h2>
+      <button onclick="startQuiz()">Retry Quiz</button>
+      <h3>Leaderboard</h3>
+      <ul id="leaderboard"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
